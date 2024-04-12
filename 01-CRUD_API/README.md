@@ -94,7 +94,7 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
 
 ## Contributors
 
--   [Eneko Martínez](https://github.com/enekomtz1)
+-   [enekomtz1](https://github.com/enekomtz1)
 
 ## License
 
