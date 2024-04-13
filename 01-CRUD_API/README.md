@@ -104,7 +104,7 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
 "quantity": 1,
 "price": 1.99
 }
-`|`json
+`          |`json
 {
 "name": "Apple juice",
 "quantity": 1,
@@ -122,17 +122,17 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
   "quantity": 10,
   "price": 2.99
 }
-``` | ```json
+```  | ```json
 {
   "message": "Product updated successfully."
 }
-``` |
-| **Delete Product**  | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_ | ```json
+```                              |
+| **Delete Product**  | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_                                    | ```json
 {
   "message": "Product deleted successfully."
 }
-``` |
-| **Get All Products**| GET `http://localhost:3000/api/products/` | _No JSON Input_ | ```json
+```                              |
+| **Get All Products**| GET `http://localhost:3000/api/products/` | _No JSON Input_                                    | ```json
 [
   {
     "name": "Apple juice",
@@ -145,7 +145,7 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
   }
 ]
 ``` |
-| **Get Product by ID**| GET `http://localhost:3000/api/products/:id` | _No JSON Input_ | ```json
+| **Get Product by ID**| GET `http://localhost:3000/api/products/:id` | _No JSON Input_                                    | ```json
 {
   "name": "Apple juice",
   "quantity": 1,
@@ -156,7 +156,7 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
   "__v": 0
 }
 ``` |
-                          |
+
 
 ## Contributors
 
