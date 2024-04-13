@@ -6,16 +6,16 @@ This project provides a simple CRUD (Create, Read, Update, Delete) API for manag
 
 ## Table of Contents
 
--   [Installation](#installation)
--   [Usage](#usage)
--   [Features](#features)
--   [Dependencies](#dependencies)
--   [Configuration](#configuration)
--   [API Endpoints](#api-endpoints)
--   [Models](#models)
--   [Examples](#examples)
--   [Contributors](#contributors)
--   [License](#license)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Configuration](#configuration)
+- [API Endpoints](#api-endpoints)
+- [Models](#models)
+- [Examples](#examples)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Installation
 
@@ -56,17 +56,17 @@ Once the server is running, the API will be accessible via `http://localhost:300
 
 ## Features
 
--   CRUD operations for product management.
--   Validation of product entries.
--   Connection to MongoDB Atlas.
+- CRUD operations for product management.
+- Validation of product entries.
+- Connection to MongoDB Atlas.
 
 ## Dependencies
 
--   `dotenv`: Loads environment variables from a `.env` file into `process.env`.
--   `express`: Fast, unopinionated, minimalist web framework.
--   `mongodb`: The official MongoDB driver for Node.js.
--   `mongoose`: MongoDB object modeling designed to work in an asynchronous environment.
--   `nodemon`: Utility that monitors for any changes in your source and automatically restarts your server.
+- `dotenv`: Loads environment variables from a `.env` file into `process.env`.
+- `express`: Fast, unopinionated, minimalist web framework.
+- `mongodb`: The official MongoDB driver for Node.js.
+- `mongoose`: MongoDB object modeling designed to work in an asynchronous environment.
+- `nodemon`: Utility that monitors for any changes in your source and automatically restarts your server.
 
 ## Configuration
 
@@ -76,36 +76,36 @@ The project uses environment variables for configuration to enhance security and
 
 ### Products
 
--   **GET `/api/products`** - Retrieves all products.
--   **GET `/api/products/:id`** - Retrieves a product by its ID.
--   **POST `/api/products`** - Creates a new product.
--   **PUT `/api/products/:id`** - Updates an existing product by its ID.
--   **DELETE `/api/products/:id`** - Deletes a product by its ID.
+- **GET `/api/products`** - Retrieves all products.
+- **GET `/api/products/:id`** - Retrieves a product by its ID.
+- **POST `/api/products`** - Creates a new product.
+- **PUT `/api/products/:id`** - Updates an existing product by its ID.
+- **DELETE `/api/products/:id`** - Deletes a product by its ID.
 
 ## Models
 
 ### Product Model
 
--   **name**: `String` (required)
--   **quantity**: `Number` (required, default `0`)
--   **price**: `Number` (required, default `0`)
--   **image**: `String` (optional)
+- **name**: `String` (required)
+- **quantity**: `Number` (required, default `0`)
+- **price**: `Number` (required, default `0`)
+- **image**: `String` (optional)
 
 Each product is also automatically given `createdAt` and `updatedAt` timestamps.
 
 ## Examples
 
-| Action                | Request                                         | Example JSON Input                                                                               | Example Response                                                                                                                                                                                                                                                       |
-| --------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Create Product**    | POST `http://localhost:3000/api/products/`      | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99<br>}<br>`          | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>`                             |
-| **Update Product**    | PUT `http://localhost:3000/api/products/:id`    | `json<br>{<br>  "name": "Updated Apple juice",<br>  "quantity": 10,<br>  "price": 2.99<br>}<br>` | `json<br>{<br>  "message": "Product updated successfully."<br>}<br>`                                                                                                                                                                                                   |
-| **Delete Product**    | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_                                                                                  | `json<br>{<br>  "message": "Product deleted successfully."<br>}<br>`                                                                                                                                                                                                   |
-| **Get All Products**  | GET `http://localhost:3000/api/products/`       | _No JSON Input_                                                                                  | `json<br>[<br>  {<br>    "name": "Apple juice",<br>    "quantity": 1,<br>    "price": 1.99,<br>    "_id": "661a7b8d744fbc3cca2875c9",<br>    "createdAt": "2024-04-13T12:33:17.021Z",<br>    "updatedAt": "2024-04-13T12:33:17.021Z",<br>    "__v": 0<br>  }<br>]<br>` |
-| **Get Product by ID** | GET `http://localhost:3000/api/products/:id`    | _No JSON Input_                                                                                  | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>`                             |
+| Action            | Request                          | Example JSON Input                                 | Example Response                                                                                       |
+| ----------------- | -------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| **Create Product** | POST `http://localhost:3000/api/products/` | ```json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99<br>}<br>``` | ```json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>``` |
+| **Update Product** | PUT `http://localhost:3000/api/products/:id` | ```json<br>{<br>  "name": "Updated Apple juice",<br>  "quantity": 10,<br>  "price": 2.99<br>}<br>``` | ```json<br>{<br>  "message": "Product updated successfully."<br>}<br>```                               |
+| **Delete Product** | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_                                    | ```json<br>{<br>  "message": "Product deleted successfully."<br>}<br>```                               |
+| **Get All Products** | GET `http://localhost:3000/api/products/` | _No JSON Input_                                    | ```json<br>[<br>  {<br>    "name": "Apple juice",<br>    "quantity": 1,<br>    "price": 1.99,<br>    "_id": "661a7b8d744fbc3cca2875c9",<br>    "createdAt": "2024-04-13T12:33:17.021Z",<br>    "updatedAt": "2024-04-13T12:33:17.021Z",<br>    "__v": 0<br>  }<br>]<br>``` |
+| **Get Product by ID** | GET `http://localhost:3000/api/products/:id` | _No JSON Input_                                    | ```json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>``` |
 
 ## Contributors
 
--   [enekomtz1](https://github.com/enekomtz1)
+- [enekomtz1](https://github.com/enekomtz1)
 
 ## License
 
