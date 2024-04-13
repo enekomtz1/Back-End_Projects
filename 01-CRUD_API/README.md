@@ -13,6 +13,7 @@ This project provides a simple CRUD (Create, Read, Update, Delete) API for manag
 -   [Configuration](#configuration)
 -   [API Endpoints](#api-endpoints)
 -   [Models](#models)
+-   [Examples](#examples)
 -   [Contributors](#contributors)
 -   [License](#license)
 
@@ -91,6 +92,16 @@ The project uses environment variables for configuration to enhance security and
 -   **image**: `String` (optional)
 
 Each product is also automatically given `createdAt` and `updatedAt` timestamps.
+
+## Examples
+
+| Action                | Request                                         | Example JSON Input                                         | Example Response                                                                                                                                                                             |
+| --------------------- | ----------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Create Product**    | POST `http://localhost:3000/api/products/`      | `{ "name": "Apple juice", "quantity": 1, "price": 1.99 }`  | `{ "name": "Apple juice", "quantity": 1, "price": 1.99, "_id": "661a7b8d744fbc3cca2875c9", "createdAt": "2024-04-13T12:33:17.021Z", "updatedAt": "2024-04-13T12:33:17.021Z", "__v": 0 }`     |
+| **Update Product**    | PUT `http://localhost:3000/api/products/:id`    | `{ "name": "Apple juice", "quantity": 10, "price": 1.99 }` | `{ "message": "Product updated successfully." }`                                                                                                                                             |
+| **Delete Product**    | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_                                            | `{ "message": "Product deleted successfully." }`                                                                                                                                             |
+| **Get All Products**  | GET `http://localhost:3000/api/products/`       | _No JSON Input_                                            | `[ { "name": "Apple juice", "quantity": 1, "price": 1.99, "_id": "661a7b8d744fbc3cca2875c9", "createdAt": "2024-04-13T12:33:17.021Z", "updatedAt": "2024-04-13T12:33:17.021Z", "__v": 0 } ]` |
+| **Get Product by ID** | GET `http://localhost:3000/api/products/:id`    | _No JSON Input_                                            | `{ "name": "Apple juice", "quantity": 1, "price": 1.99, "_id": "661a7b8d744fbc3cca2875c9", "createdAt": "2024-04-13T12:33:17.021Z", "updatedAt": "2024-04-13T12:33:17.021Z", "__v": 0 }`     |
 
 ## Contributors
 
