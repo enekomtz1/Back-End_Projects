@@ -95,21 +95,68 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
 
 ## Examples
 
-| Action                | Request                                         | Example JSON Input                                                                               | Example Response                                                                                                                                                                                                                                                       |
-| --------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Create Product**    | POST `http://localhost:3000/api/products/`      | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99<br>}<br>`          | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>`                             |
-| **Update Product**    | PUT `http://localhost:3000/api/products/:id`    | `json<br>{<br>  "name": "Updated Apple juice",<br>  "quantity": 10,<br>  "price": 2.99<br>}<br>` | `json<br>{<br>  "message": "Product updated successfully."<br>}<br>`                                                                                                                                                                                                   |
-| **Delete Product**    | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_                                                                                  | `json<br>{<br>  "message": "Product deleted successfully."<br>}<br>`                                                                                                                                                                                                   |
-| **Get All Products**  | GET `http://localhost:3000/api/products/`       | _No JSON Input_                                                                                  | `json<br>[<br>  {<br>    "name": "Apple juice",<br>    "quantity": 1,<br>    "price": 1.99,<br>    "_id": "661a7b8d744fbc3cca2875c9",<br>    "createdAt": "2024-04-13T12:33:17.021Z",<br>    "updatedAt": "2024-04-13T12:33:17.021Z",<br>    "__v": 0<br>  }<br>]<br>` |
-| **Get Product by ID** | GET `http://localhost:3000/api/products/:id`    | _No JSON Input_                                                                                  | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>`                             |
+| Action             | Request                                    | Example JSON Input | Example Response |
+| ------------------ | ------------------------------------------ | ------------------ | ---------------- |
+| **Create Product** | POST `http://localhost:3000/api/products/` | ```json            |
 
-| Action                | Request                                         | Example JSON Input                                                                               | Example Response                                                                                                                                                                                                                                                       |
-| --------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Create Product**    | POST `http://localhost:3000/api/products/`      | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99<br>}<br>`          | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>`                             |
-| **Update Product**    | PUT `http://localhost:3000/api/products/:id`    | `json<br>{<br>  "name": "Updated Apple juice",<br>  "quantity": 10,<br>  "price": 2.99<br>}<br>` | `json<br>{<br>  "message": "Product updated successfully."<br>}<br>`                                                                                                                                                                                                   |
-| **Delete Product**    | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_                                                                                  | `json<br>{<br>  "message": "Product deleted successfully."<br>}<br>`                                                                                                                                                                                                   |
-| **Get All Products**  | GET `http://localhost:3000/api/products/`       | _No JSON Input_                                                                                  | `json<br>[<br>  {<br>    "name": "Apple juice",<br>    "quantity": 1,<br>    "price": 1.99,<br>    "_id": "661a7b8d744fbc3cca2875c9",<br>    "createdAt": "2024-04-13T12:33:17.021Z",<br>    "updatedAt": "2024-04-13T12:33:17.021Z",<br>    "__v": 0<br>  }<br>]<br>` |
-| **Get Product by ID** | GET `http://localhost:3000/api/products/:id`    | _No JSON Input_                                                                                  | `json<br>{<br>  "name": "Apple juice",<br>  "quantity": 1,<br>  "price": 1.99,<br>  "_id": "661a7b8d744fbc3cca2875c9",<br>  "createdAt": "2024-04-13T12:33:17.021Z",<br>  "updatedAt": "2024-04-13T12:33:17.021Z",<br>  "__v": 0<br>}<br>`                             |
+{
+"name": "Apple juice",
+"quantity": 1,
+"price": 1.99
+}
+`|`json
+{
+"name": "Apple juice",
+"quantity": 1,
+"price": 1.99,
+"\_id": "661a7b8d744fbc3cca2875c9",
+"createdAt": "2024-04-13T12:33:17.021Z",
+"updatedAt": "2024-04-13T12:33:17.021Z",
+"\_\_v": 0
+}
+
+````|
+| **Update Product**  | PUT `http://localhost:3000/api/products/:id` | ```json
+{
+  "name": "Updated Apple juice",
+  "quantity": 10,
+  "price": 2.99
+}
+``` | ```json
+{
+  "message": "Product updated successfully."
+}
+``` |
+| **Delete Product**  | DELETE `http://localhost:3000/api/products/:id` | _No JSON Input_ | ```json
+{
+  "message": "Product deleted successfully."
+}
+``` |
+| **Get All Products**| GET `http://localhost:3000/api/products/` | _No JSON Input_ | ```json
+[
+  {
+    "name": "Apple juice",
+    "quantity": 1,
+    "price": 1.99,
+    "_id": "661a7b8d744fbc3cca2875c9",
+    "createdAt": "2024-04-13T12:33:17.021Z",
+    "updatedAt": "2024-04-13T12:33:17.021Z",
+    "__v": 0
+  }
+]
+``` |
+| **Get Product by ID**| GET `http://localhost:3000/api/products/:id` | _No JSON Input_ | ```json
+{
+  "name": "Apple juice",
+  "quantity": 1,
+  "price": 1.99,
+  "_id": "661a7b8d744fbc3cca2875c9",
+  "createdAt": "2024-04-13T12:33:17.021Z",
+  "updatedAt": "2024-04-13T12:33:17.021Z",
+  "__v": 0
+}
+``` |
+                          |
 
 ## Contributors
 
@@ -118,3 +165,4 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
 ## License
 
 This project is open-sourced under the ISC license.
+````
