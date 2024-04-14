@@ -26,13 +26,13 @@ router.post("/login", async (req, res) => {
 		const user = await User.findOne({ email });
 
 		if (!user) {
-			throw new Error("Unable to login , invalid credentials");
+			throw new Error("Unable to login, invalid email.");
 		}
 
-		const isMatch = await bcrypt.compare(password, user.password);
+		const passwordsMatch = await bcrypt.compare(password, user.password);
 
-		if (!isMatch) {
-			throw new Error("Unable to login , invalid credentials");
+		if (!passwordsMatch) {
+			throw new Error("Unable to login, invalid password.");
 		}
 
 		const token = jwt.sign(
@@ -42,12 +42,10 @@ router.post("/login", async (req, res) => {
 			process.env.JWT_SECRET_KEY
 		);
 
-		res.send({ user, token, message: "Logged in successfully" });
+		res.send({ user, token, message: "Logged in successfully!" });
 	} catch (err) {
-		res.status(400).send({ error: err });
+		res.status(400).send({ message: "Error in user login route: ", error: err });
 	}
 });
 
-// register a user
-// login a user
 module.exports = router;

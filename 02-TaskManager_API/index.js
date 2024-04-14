@@ -5,6 +5,7 @@ const userRoutes = require("./routes/userRoutes");
 const taskRoutes = require("./routes/taskRoutes");
 
 require("dotenv").config();
+require('./db');
 
 const PORT = process.env.PORT || 5000;
 
