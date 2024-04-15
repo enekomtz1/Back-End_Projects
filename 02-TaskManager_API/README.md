@@ -1,6 +1,6 @@
 # Task Manager API
 
-![Task Manager API Banner](https://imgur.com/iwpkTDM)
+![Task Manager API Banner](https://i.imgur.com/RzpzRwB.png)
 
 The Task Manager API provides a backend service for managing tasks with user authentication. It allows users to register, login, and manage their tasks efficiently.
 
