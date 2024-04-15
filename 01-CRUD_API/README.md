@@ -1,6 +1,6 @@
-# CRUD API
-
 ![CRUD API Banner](https://i.imgur.com/ie4YViv.png)
+
+# CRUD API
 
 This project provides a simple CRUD (Create, Read, Update, Delete) API for managing products. It is built using Node.js, Express, and MongoDB.
 
