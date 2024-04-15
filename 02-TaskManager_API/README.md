@@ -101,4 +101,4 @@ Environmental variables are used to manage configuration settings such as databa
 
 ## License
 
-This project is licensed under the ISC License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the [MIT License](https://opensource.org/license/mit).
