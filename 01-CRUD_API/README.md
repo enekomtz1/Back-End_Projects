@@ -99,4 +99,4 @@ Each product is also automatically given `createdAt` and `updatedAt` timestamps.
 
 ## License
 
-This project is open-sourced under the ISC license.
+This project is licensed under the [MIT License](https://opensource.org/license/mit).
