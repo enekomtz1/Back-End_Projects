@@ -1,4 +1,4 @@
-![Task Manager API Banner](https://i.imgur.com/RzpzRwB.png)
+![Task Manager API Banner](https://i.imgur.com/4rnjb7h.png)
 
 # Task Manager API
 
